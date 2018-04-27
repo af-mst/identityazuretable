@@ -15,5 +15,14 @@ namespace ElCamino.AspNetCore.Identity.AzureTable.Model
 
         [JsonProperty("locationMode")]
         public string LocationMode { get; set; }
+
+        [JsonProperty("rolesTable")]
+        public string RolesTable { get; set; } = "AspNetRoles";
+
+        [JsonProperty("usersTable")]
+        public string UsersTable { get; set; } = "AspNetUsers";
+
+        [JsonProperty("indexTable")]
+        public string IndexTable { get; set; } = "AspNetIndex";
     }
 }

@@ -43,9 +43,9 @@ namespace ElCamino.AspNetCore.Identity.AzureTable
                     throw new ArgumentException("Invalid LocationMode defined in config. For more information on geo-replication location modes: http://msdn.microsoft.com/en-us/library/azure/microsoft.windowsazure.storage.retrypolicies.locationmode.aspx", "config.LocationMode");
                 }
             }
-            _indexTable = _client.GetTableReference(FormatTableNameWithPrefix(Constants.TableNames.IndexTable));
-            _roleTable = _client.GetTableReference(FormatTableNameWithPrefix(Constants.TableNames.RolesTable));
-            _userTable = _client.GetTableReference(FormatTableNameWithPrefix(Constants.TableNames.UsersTable));
+            _indexTable = _client.GetTableReference(FormatTableNameWithPrefix(config.IndexTable));
+            _roleTable = _client.GetTableReference(FormatTableNameWithPrefix(config.RolesTable));
+            _userTable = _client.GetTableReference(FormatTableNameWithPrefix(config.UsersTable));
         }
 
         ~IdentityCloudContext()

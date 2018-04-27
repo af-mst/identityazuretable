@@ -17,12 +17,13 @@ namespace ElCamino.AspNetCore.Identity.AzureTable
             public const string DefaultStorageConnectionStringKey = "StorageConnectionString";
         }
 
-        public static class TableNames
+        // moved to IdentityConfiguration
+        /*public static class TableNames
         {
             public const string RolesTable = "AspNetRoles";
             public const string UsersTable = "AspNetUsers";
             public const string IndexTable = "AspNetIndex";
-        }
+        }*/
 
         public static class RowKeyConstants
         {
